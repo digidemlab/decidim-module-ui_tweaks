@@ -1,0 +1,11 @@
+<!-- insert_bottom ".layout-aside__section div.rounded" -->
+<div class="text-gray-2 space-y-1.5">
+  <div class="">
+    <a href="#comments">
+      <%= icon "chat-1-line", class: "inline-block align-middle" %>
+      <span class="inline-block align-middle underline">
+        <%= t("decidim.statistics.comments_count") %>
+      </span>
+    </a>
+  </div>
+</div>

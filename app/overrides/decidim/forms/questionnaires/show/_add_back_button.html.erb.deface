@@ -1,0 +1,2 @@
+<!-- insert_before "h1.title-decorator" -->
+<%= render partial: "decidim/shared/back_button" %>

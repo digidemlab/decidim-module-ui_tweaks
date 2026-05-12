@@ -1,0 +1,2 @@
+<!-- insert_before ".layout-main__heading" -->
+<%= render partial: "decidim/shared/back_button" %>

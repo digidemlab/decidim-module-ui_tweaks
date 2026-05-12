@@ -1,0 +1,7 @@
+<!-- insert_top ".layout-2col__aside" -->
+<% if current_participatory_space %>
+  <%= link_to Decidim::ResourceLocatorPresenter.new(current_participatory_space).path, class: "inline-flex items-center gap-1 text-sm md:-mb-5" do %>
+    <%= icon "arrow-left-line" %>
+    <%= t("devise.shared.links.back") %>
+  <% end %>
+<% end %>

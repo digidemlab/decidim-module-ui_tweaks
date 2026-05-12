@@ -1,0 +1,2 @@
+<!-- insert_before ".text-center" -->
+<%= render partial: "decidim/shared/back_button" %>
