@@ -1,5 +1,30 @@
 <!-- insert_before ".mini-footer" -->
-<a href="#sticky-header-container" class="back-to-top is-hidden md:hidden button hollow button__transparent-secondary button__lg" data-back-to-top aria-label="<%= t("layouts.decidim.back_to_top") %>">
+<a href="#sticky-header-container" class="back-to-top is-hidden button hollow button__transparent-secondary button__lg" data-back-to-top aria-label="<%= t("layouts.decidim.back_to_top") %>">
   <%= icon "arrow-up-line" %>
   <span><%= t("layouts.decidim.back_to_top") %></span>
 </a>
+<script>
+  let backToTop = null;
+
+  const toggle = () => {
+    if (backToTop) backToTop.classList.toggle("is-hidden", window.scrollY < 400);
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const initBackToTop = () => {
+    backToTop = document.querySelector("[data-back-to-top]");
+    if (!backToTop) return;
+    toggle();
+  };
+
+  window.addEventListener("scroll", toggle, { passive: true });
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-back-to-top]")) handleClick(e);
+  });
+  document.addEventListener("DOMContentLoaded", initBackToTop);
+  document.addEventListener("turbo:load", initBackToTop);
+</script>

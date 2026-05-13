@@ -1,2 +1,0 @@
-<!-- insert_before "body" -->
-<%= javascript_pack_tag "decidim_ui_tweaks" %>
