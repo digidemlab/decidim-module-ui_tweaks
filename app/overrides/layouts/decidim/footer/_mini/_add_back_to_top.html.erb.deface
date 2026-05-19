@@ -7,7 +7,7 @@
   let backToTop = null;
 
   const toggle = () => {
-    if (backToTop) backToTop.classList.toggle("is-hidden", window.scrollY < 400);
+    if (backToTop) backToTop.classList.toggle("is-hidden", window.scrollY < 600);
   };
 
   const handleClick = (e) => {
