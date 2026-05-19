@@ -19,3 +19,8 @@ Button linking to the top of the page, appears after scrolling 600px down.
 * app/overrides/layouts/footer/
 * app/packs/stylesheets/decidim/modules/
 * config/locales/
+
+## Debate post - Link to comment
+Link to comments from info box on debate post page.
+
+* app/overrides/decidim/debates/show/
