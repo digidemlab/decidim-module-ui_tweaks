@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+$LOAD_PATH.push File.expand_path("lib", __dir__)
+
+require "decidim/ui_tweaks/version"
+
 Gem::Specification.new do |s|
   s.name = "decidim-ui_tweaks"
   s.version = "0.0.1"
@@ -12,5 +16,5 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*", "LICENSE", "README.md"]
 
-  s.add_dependency "decidim-core", "~> 0.30.0"
+  s.add_dependency "decidim-core", Decidim::UiTweaks.decidim_version
 end

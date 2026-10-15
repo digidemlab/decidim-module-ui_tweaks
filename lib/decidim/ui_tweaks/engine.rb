@@ -10,7 +10,7 @@ module Decidim
       end
 
       initializer "decidim_ui_tweaks.view_paths" do
-        ActionController::Base.view_paths.unshift(File.expand_path("app/views", root))
+        ActionController::Base.prepend_view_path(File.expand_path("app/views", root))
       end
     end
   end

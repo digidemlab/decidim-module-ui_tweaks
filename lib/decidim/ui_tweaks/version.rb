@@ -2,7 +2,12 @@
 
 module Decidim
   module UiTweaks
-    VERSION = "0.0.1"
-    DECIDIM_VERSION = "~> 0.30.0"
+    def self.version
+      "0.31.0"
+    end
+
+    def self.decidim_version
+      "~> 0.31.0"
+    end
   end
 end
